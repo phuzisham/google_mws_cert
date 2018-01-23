@@ -12,7 +12,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 0; 
+  margin: 0;
 }
 
 header, nav, footer, section, article, div {
@@ -25,11 +25,19 @@ ul {
   margin: 0;
 }
 
+image, embed, object, video {
+  max-width: 100%;
+}
+
+nav, a, button {
+  min-width: 48px;
+  min-height: 48px;
+}
 
 /*
  *
  * Common
- * 
+ *
  */
 
 .news__more {
@@ -226,7 +234,7 @@ main {
 
 .scores__table th,
 .scores__table td {
-  padding: 1em; 
+  padding: 1em;
 }
 
 .scores__table th {
@@ -369,4 +377,32 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+}
+
+@media screen and (max-width: 800px) {
+  main, .nav, .header__inner, .hero, .weather {
+    width: 100%;
+  }
+
+  .scores, .top-newsn{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .scores, .top-news {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header__title {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .header__title {
+    width: 50%;
+  }
 }
